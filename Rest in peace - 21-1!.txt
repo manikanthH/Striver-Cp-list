@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	int t;
+	cin>>t;
+	while(t--)
+	{
+		string s;
+		cin>>s;
+		bool flag=false;
+		int n=s.size();
+		for(int i=0;i<n;i++)
+		{
+			if(s[i]=='2' and s[i+1]=='1')
+			flag=true;
+		}
+		int num=stoi(s);
+		if(num%21==0)
+		flag=true;
+
+		if(flag)
+		cout<<"The streak is broken!"<<"\n";
+		else
+		cout<<"The streak lives still in our heart!"<<"\n";
+	}
+	return 0;
+}
